@@ -17,6 +17,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Clean Project
-        run: ./gradlew clean
+        run: |
+          chmod +x gradlew
+          ./gradlew clean
       - name: Build Project
-        run: ./gradlew build
+        run: |
+          chmod +x gradlew
+          ./gradlew build
